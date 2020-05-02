@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "bettersiegetactics:block/hemp_stage7"
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"hh",
+		"hh",
+		"hh"
+	],
+	"key":
+	{
+		"h":
+		{
+			"tag": "forge:crops/hemp"
+		}
+	},
+	"result":
+	{
+		"item": "bettersiegetactics:rope",
+		"count": 1
+	}
+}

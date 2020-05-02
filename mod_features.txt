@@ -1,0 +1,36 @@
+Features:
+	Teams/Factions
+	Castle marker(s)
+	Hemp
+	Rope
+	Tippable Cauldron (fill w/ water or sand)
+	Polearms
+	Siege Ladders
+	Grapling hooks
+	siege towers
+	portable bridges
+	rolling shields
+	trebuchets
+	catapults
+	ballistas
+	(drawbridge)
+	portcullis
+	lockable gate
+	
+Vanilla Changes:
+	(Breaking time of obsidian reduced)
+	(Slightly slow down fire spread)
+	Doors/trapdoors/etc can only be opened by owning team
+	(Infinity enchantment removed)
+	Unsupported blocks collapse
+	Water and Lava source blocks affected by gravity
+	Increase time required to place blocks when on hostile territory
+	Increase time required to break blocks when on hostile territory
+
+
+Balance considerations:
+	Ensure defenders aren't able to fill breaches instantly
+
+
+	
+	
