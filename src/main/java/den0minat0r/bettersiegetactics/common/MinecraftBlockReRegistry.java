@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import den0minat0r.bettersiegetactics.common.block.SupportedBlock;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,12 +21,17 @@ public class MinecraftBlockReRegistry {
 	public static HashMap<String, RegistryObject<Block>> BLOCK_REGISTRY_OBJECTS = new HashMap<>();
 	
 	static {
-		String[] overridden_items = { "cobblestone" };
+		String[] overridden_items = { "cobblestone" }; // TODO: Load list of overridden block types, rather than hard-coding.
 		for (String item : overridden_items) 
 		{
 			LOGGER.info("Overriding registry entry for minecraft:" + item);
-			Block.Properties props = Block.Properties.from(ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", item)));
-			BLOCK_REGISTRY_OBJECTS.put(item, BLOCKS.register(item, () -> new SupportedBlock(props, 3)));
+			ResourceLocation loc = new ResourceLocation("minecraft", item);
+			Block.Properties props = Block.Properties.from(ForgeRegistries.BLOCKS.getValue(loc));
+			// Register overridden block type
+			Block block = new SupportedBlock(props, 3); // TODO: Load specific support_distance for each block type.
+			BLOCK_REGISTRY_OBJECTS.put(item, BLOCKS.register(item, () -> block));
+			// Re-map vanilla item to point to new block.
+			Item.BLOCK_TO_ITEM.put(block, ForgeRegistries.ITEMS.getValue(loc));
 		}
 	}
 }

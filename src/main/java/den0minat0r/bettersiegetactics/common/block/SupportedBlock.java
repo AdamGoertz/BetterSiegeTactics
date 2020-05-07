@@ -119,7 +119,6 @@ public class SupportedBlock extends FallingBlock {
 			}
 			return false;
 		}
-		
 		return true;
 	}
 	
