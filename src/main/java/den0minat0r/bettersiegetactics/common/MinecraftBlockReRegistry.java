@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -33,5 +34,6 @@ public class MinecraftBlockReRegistry {
 			// Re-map vanilla item to point to new block.
 			Item.BLOCK_TO_ITEM.put(block, ForgeRegistries.ITEMS.getValue(loc));
 		}
+		LOGGER.info(FMLPaths.CONFIGDIR.get());
 	}
 }
